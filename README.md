@@ -72,7 +72,7 @@ macOS/Linux translation is given below the Windows block.
 
 ```powershell
 # 1. Clone
-git clone <your-repo-url> docusense
+git clone https://github.com/Nowfel6/DocuSense_Ai.git docusense
 cd docusense
 
 # 2. Backend virtual environment (Python 3.11+; 3.12 tested)
