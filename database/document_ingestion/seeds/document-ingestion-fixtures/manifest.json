@@ -1,0 +1,34 @@
+{
+  "scope": "DATABASE_ONLY",
+  "version": 1,
+  "files": [
+    {
+      "key": "F1",
+      "path": "synthetic-invoice.pdf",
+      "mime_type": "application/pdf",
+      "file_size_bytes": 604,
+      "file_hash": "9c250d616d1ded98fbb253db0cfc31f12af969cc508d67d0fe4d1da32c08f127"
+    },
+    {
+      "key": "F2",
+      "path": "synthetic-order.png",
+      "mime_type": "image/png",
+      "file_size_bytes": 77,
+      "file_hash": "4ea7499d8cfc60b862a856841cc11ede7dd77c360cf80d703c5bfbd6c1597979"
+    },
+    {
+      "key": "F3",
+      "path": "synthetic-packing.jpg",
+      "mime_type": "image/jpeg",
+      "file_size_bytes": 633,
+      "file_hash": "00f89f40c8ee43e15e91c220953f255ac06f54fc640ebfc66fbea038fa446cc8"
+    },
+    {
+      "key": "F4",
+      "path": "synthetic-failed.pdf",
+      "mime_type": "application/pdf",
+      "file_size_bytes": 604,
+      "file_hash": "9b1784428766e6725cb7e529cc7eab3823296b72974c7656c4247d6083dc8ec6"
+    }
+  ]
+}

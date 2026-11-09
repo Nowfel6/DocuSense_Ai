@@ -1,0 +1,22 @@
+{
+  "feature": "dashboard-activity",
+  "fixture_version": "1.0.0",
+  "classification": "DATABASE_ONLY_SYNTHETIC_ORACLE",
+  "predecessor_head": "20260907_0006",
+  "contract_sha256": "4da32e9925ac8304f97500eeb95ec2756ca56872c61fc31a6cb6e12d381229bd",
+  "tenants": 2,
+  "normal_window_days": 30,
+  "maximum_window_days": 366,
+  "oracle_event_count": 13,
+  "tenant_a_event_count": 11,
+  "tenant_b_event_count": 2,
+  "approved_p95_ms": {
+    "dashboard_30_day": 300,
+    "dashboard_366_day": 750,
+    "activity_first_page": 200,
+    "activity_deep_page": 300
+  },
+  "contains_customer_data": false,
+  "creates_feature_entities": false,
+  "persistent_load_allowed": false
+}

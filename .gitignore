@@ -1,0 +1,61 @@
+# DocuSense AI - Python Backend
+# Virtual environment contents are ignored by git.
+.venv/
+.env
+.env.*
+!.env.example
+infrastructure/local/
+node_modules/
+.next/
+*.egg-info/
+.pytest_cache/
+
+# Database migrations history
+db/migrations/*
+
+# Build directories
+dist/
+build/
+target/
+**/__pycache__/
+*.pyc
+
+# Local run artifacts / logs
+*.log
+*.out
+*.err
+tsconfig.tsbuildinfo
+
+# One-off debug / diagnostic helpers (not registered production code; the
+# runtime entry points are run_server.py, start_server.bat, app.worker and
+# scripts/export_openapi.py + reset_demo_passwords.py)
+backend/diag.py
+backend/diag2.py
+backend/diag3.py
+backend/diag4.py
+backend/check_state.py
+backend/check_new.py
+backend/smoke_evidence.py
+backend/asgi_wrapper.py
+backend/run_server_fixed.py
+backend/validate_live_payload.mjs
+backend/reset_doc.py
+backend/reset_out.txt
+backend/login_page.html
+backend/*_snapshot.json
+backend/scripts/diag_chunking.py
+backend/scripts/diag_full_pipeline.py
+backend/scripts/dump_chunks.py
+backend/scripts/inspect_jobs.py
+backend/scripts/inspect_latest.py
+backend/scripts/probe_publish.py
+backend/scripts/s3_reader_diag.py
+backend/scripts/s3_reader_trace.py
+backend/scripts/s3_tls_check.py
+backend/scripts/show_jobs.py
+backend/scripts/test_reconciler_fix.py
+backend/scripts/test_reconciler_graph.py
+backend/scripts/time_import.py
+backend/scripts/watch_jobs.py
+backend/scripts/__retry_out.txt
+

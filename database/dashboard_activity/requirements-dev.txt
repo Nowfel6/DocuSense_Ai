@@ -1,0 +1,8 @@
+# Dashboard/activity database build reuses the pinned shared Stage-3 environment.
+alembic==1.19.1
+pglast==7.18
+psycopg==3.3.5
+psycopg-binary==3.3.5
+pytest==8.4.2
+SQLAlchemy==2.0.52
+pgvector==0.5.0

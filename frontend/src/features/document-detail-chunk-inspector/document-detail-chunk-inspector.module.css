@@ -1,0 +1,521 @@
+.pageStack,
+.workbenchPage,
+.workbenchPanel,
+.sectionStack,
+.inspectorStack {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.surfaceSection,
+.compactStatus,
+.inspector,
+.inspectorEmpty,
+.filterPanel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface);
+}
+
+.surfaceSection {
+  grid-column: span 6;
+}
+
+.fileFacts {
+  grid-column: span 8;
+}
+
+.reviewFacts {
+  display: grid;
+  grid-column: span 4;
+  align-content: start;
+  justify-items: start;
+  gap: 14px;
+}
+
+.processingSection,
+.lineItemsRegion {
+  grid-column: 1 / -1;
+}
+
+.surfaceSection > h2,
+.reviewFacts p,
+.sectionHeading h2,
+.sectionHeading p,
+.compactStatus h2,
+.compactStatus p,
+.resultsRegion h2,
+.inspector h2,
+.inspectorEmpty h2,
+.inspectorEmpty p,
+.inspectorStack h3,
+.inspectorStack p {
+  margin: 0;
+}
+
+.surfaceSection > h2,
+.sectionHeading h2,
+.compactStatus h2,
+.inspector h2,
+.inspectorEmpty h2 {
+  font-size: 1.125rem;
+  line-height: 1.45;
+}
+
+.surfaceSection > h2 {
+  margin-bottom: 16px;
+}
+
+.sectionHeading,
+.compactStatus,
+.inspectorHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionHeading p,
+.compactStatus p,
+.reviewFacts p,
+.muted,
+.unavailable,
+.scoreNote {
+  color: var(--ds-text-secondary);
+}
+
+.muted,
+.scoreNote {
+  font-size: 0.8125rem;
+}
+
+.detailGrid,
+.metricGrid,
+.inspectorFacts {
+  display: grid;
+  margin: 0;
+  gap: 14px 18px;
+}
+
+.detailGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metricGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.detailGrid div,
+.metricGrid div,
+.inspectorFacts div,
+.lineItemCards dl div {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.detailGrid dt,
+.metricGrid dt,
+.inspectorFacts dt,
+.lineItemCards dt {
+  color: var(--ds-text-muted);
+  font-size: 0.75rem;
+}
+
+.detailGrid dd,
+.metricGrid dd,
+.inspectorFacts dd,
+.lineItemCards dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.metricGrid dd,
+.overallConfidence strong {
+  font-size: 1.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.overallConfidence {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--ds-text-secondary);
+}
+
+.overallConfidence strong {
+  color: var(--ds-text-primary);
+}
+
+.identifier {
+  font-family: var(--ds-font-mono);
+  font-size: 0.8125rem;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.persistedProgress {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0;
+  color: var(--ds-text-secondary);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.persistedProgress progress {
+  width: 100%;
+  accent-color: var(--ds-technical);
+}
+
+.sourceAction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.sourceAction span {
+  color: var(--ds-text-muted);
+  font-size: 0.8125rem;
+}
+
+.lineItemCards,
+.resultCards {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.workbenchPage {
+  gap: 18px;
+}
+
+.compactStatus {
+  align-items: center;
+}
+
+.workbenchGrid {
+  display: grid;
+  min-width: 0;
+  gap: 20px;
+}
+
+.workbenchGrid[data-wide="true"] {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+}
+
+.workbenchMain {
+  min-width: 0;
+}
+
+.filterPanel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 16px;
+}
+
+.filterActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.resultsRegion {
+  display: grid;
+  min-width: 0;
+  gap: 12px;
+}
+
+.resultsRegion h2 {
+  color: var(--ds-text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.resultButton,
+.cardSelect {
+  cursor: pointer;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+}
+
+.resultButton {
+  padding: 2px;
+  color: var(--ds-focus);
+  font-family: var(--ds-font-mono);
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resultTable :global(tr[data-selected="true"] > *) {
+  background: rgb(103 167 216 / 12%);
+}
+
+.inspector,
+.inspectorEmpty {
+  position: sticky;
+  top: calc(var(--ds-header-height) + 20px);
+  align-self: start;
+  max-height: calc(100vh - var(--ds-header-height) - 40px);
+  overflow-y: auto;
+}
+
+.inspectorEmpty {
+  display: grid;
+  gap: 8px;
+  border-style: dashed;
+}
+
+.inspectorHeading {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.inspectorHeading h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.inspectorBadges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.inspectorFacts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.inspectorStack section {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+}
+
+.inspectorStack h3 {
+  font-size: 0.9375rem;
+}
+
+.rawContent {
+  max-height: 320px;
+  padding: 12px;
+  margin: 0;
+  overflow: auto;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+  color: var(--ds-text-secondary);
+  background: var(--ds-surface-inset);
+  font-family: var(--ds-font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.structuredTableScroll {
+  overflow-x: auto;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+}
+
+.structuredTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.structuredTable th,
+.structuredTable td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--ds-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.structuredTable th {
+  color: var(--ds-text-secondary);
+  background: var(--ds-surface-raised);
+}
+
+.ruleList {
+  display: grid;
+  gap: 6px;
+  padding-left: 20px;
+  margin: 0;
+  color: var(--ds-text-secondary);
+}
+
+.visuallyHidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 1199px) {
+  .fileFacts,
+  .reviewFacts,
+  .surfaceSection {
+    grid-column: span 6;
+  }
+
+  .processingSection,
+  .lineItemsRegion {
+    grid-column: 1 / -1;
+  }
+
+  .filterPanel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 899px) {
+  .resultTable,
+  .lineItemTable {
+    display: none;
+  }
+
+  .resultCards,
+  .lineItemCards {
+    display: grid;
+    gap: 12px;
+  }
+
+  .resultCards li,
+  .lineItemCards li {
+    border: 1px solid var(--ds-border);
+    border-radius: var(--ds-radius-panel);
+    background: var(--ds-surface);
+  }
+
+  .resultCards li[data-selected="true"] {
+    border-color: var(--ds-technical);
+    background: rgb(103 167 216 / 10%);
+  }
+
+  .cardSelect {
+    display: grid;
+    width: 100%;
+    gap: 6px;
+    padding: 14px;
+  }
+
+  .cardSelect span {
+    color: var(--ds-text-secondary);
+    font-size: 0.8125rem;
+  }
+
+  .lineItemCards li {
+    padding: 14px;
+  }
+
+  .lineItemCards h3,
+  .lineItemCards dl {
+    margin: 0;
+  }
+
+  .lineItemCards h3 {
+    margin-bottom: 12px;
+    font-size: 0.9375rem;
+  }
+
+  .lineItemCards dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageStack,
+  .workbenchPage,
+  .workbenchPanel {
+    gap: 16px;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fileFacts,
+  .reviewFacts,
+  .surfaceSection,
+  .processingSection,
+  .lineItemsRegion {
+    grid-column: 1;
+  }
+
+  .surfaceSection,
+  .compactStatus,
+  .filterPanel {
+    padding: 16px;
+  }
+
+  .sectionHeading,
+  .compactStatus,
+  .overallConfidence {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .detailGrid,
+  .metricGrid,
+  .filterPanel,
+  .inspectorFacts {
+    grid-template-columns: 1fr;
+  }
+
+  .filterActions {
+    display: grid;
+    justify-content: stretch;
+  }
+
+  .lineItemCards dl {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resultButton,
+  .cardSelect {
+    scroll-behavior: auto;
+  }
+}
+
+@media (forced-colors: active) {
+  .resultCards li[data-selected="true"],
+  .resultTable :global(tr[data-selected="true"] > *) {
+    outline: 2px solid CanvasText;
+  }
+}

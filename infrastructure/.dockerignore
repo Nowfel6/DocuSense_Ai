@@ -1,0 +1,8 @@
+# Local secrets, generated certificates and caches never enter a build context.
+local/
+*.pem
+*.key
+*.crt
+.env*
+__pycache__/
+*.pyc

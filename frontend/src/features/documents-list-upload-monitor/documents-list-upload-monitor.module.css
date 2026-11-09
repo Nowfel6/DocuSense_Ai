@@ -1,0 +1,420 @@
+.pageStack {
+  display: grid;
+  gap: 24px;
+}
+
+.filterPanel,
+.uploadPanel,
+.monitorPanel {
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface);
+}
+
+.filterPanel {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+.filterPanel h2,
+.sectionTitle,
+.monitorPanel h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.filterActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+}
+
+.collection {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.resultSummary {
+  margin: 0;
+  color: var(--ds-text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.fileName {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 34rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--ds-text-primary);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.noAction {
+  color: var(--ds-text-muted);
+}
+
+.actionGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mobileCards {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.documentCard {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface);
+}
+
+.cardHeading {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardHeading h3,
+.documentCard p,
+.documentCard dl {
+  margin: 0;
+}
+
+.cardHeading h3 {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+
+.documentCard p {
+  color: var(--ds-text-secondary);
+  font-size: 0.875rem;
+}
+
+.documentCard dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.documentCard dl div {
+  display: grid;
+  gap: 3px;
+}
+
+.documentCard dt {
+  color: var(--ds-text-muted);
+  font-size: 0.75rem;
+}
+
+.documentCard dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.uploadPanel,
+.monitorPanel {
+  width: min(100%, 1120px);
+  padding: 24px;
+  margin-inline: auto;
+}
+
+.uploadPanel {
+  display: grid;
+  gap: 20px;
+}
+
+.uploadGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(260px, 3fr);
+  gap: 28px;
+}
+
+.dropField,
+.uploadControls,
+.actionStack,
+.transferStatus {
+  display: grid;
+  gap: 12px;
+}
+
+.dropZone {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 1px dashed var(--ds-border-strong);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface-inset);
+  color: var(--ds-text-secondary);
+  text-align: center;
+}
+
+.dropZone[data-dragging="true"] {
+  border-color: var(--ds-focus);
+  outline: 2px solid var(--ds-focus);
+  outline-offset: 2px;
+}
+
+.dropZone p {
+  margin: 0;
+}
+
+.dropTitle {
+  color: var(--ds-text-primary);
+  font-weight: 650;
+}
+
+.selectedFile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+  background: var(--ds-surface-raised);
+}
+
+.selectedFile div {
+  display: grid;
+  min-width: 0;
+}
+
+.selectedFile strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedFile span,
+.constraint,
+.transferStatus span,
+.documentId {
+  color: var(--ds-text-muted);
+  font-size: 0.8125rem;
+}
+
+.constraint {
+  margin: 0;
+}
+
+.transferStatus progress,
+.persistedProgress progress {
+  width: 100%;
+  accent-color: var(--ds-technical);
+}
+
+.monitorPanel {
+  display: grid;
+  gap: 22px;
+}
+
+.monitorHeading {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.monitorHeading p {
+  margin: 8px 0 3px;
+  overflow-wrap: anywhere;
+  color: var(--ds-text-secondary);
+}
+
+.documentId span {
+  font-family: var(--ds-font-mono);
+}
+
+.statusPairs {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+}
+
+.statusPairs div {
+  display: grid;
+  gap: 6px;
+}
+
+.statusPairs dt {
+  color: var(--ds-text-muted);
+  font-size: 0.75rem;
+}
+
+.statusPairs dd {
+  margin: 0;
+}
+
+.persistedProgress {
+  display: grid;
+  gap: 8px;
+  color: var(--ds-text-secondary);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.stageRail {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.stageRail li {
+  position: relative;
+  display: flex;
+  gap: 9px;
+  min-width: 0;
+  align-items: flex-start;
+  color: var(--ds-text-muted);
+}
+
+.stageRail li:not(:last-child)::after {
+  position: absolute;
+  z-index: 0;
+  top: 13px;
+  right: 8px;
+  left: 35px;
+  height: 1px;
+  background: var(--ds-border-strong);
+  content: "";
+}
+
+.stageRail li[data-status="completed"],
+.stageRail li[data-status="in_progress"] {
+  color: var(--ds-technical);
+}
+
+.stageRail li[data-status="failed"] {
+  color: var(--ds-danger);
+}
+
+.stageIcon {
+  z-index: 1;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: var(--ds-surface);
+}
+
+.stageRail strong,
+.stageRail small {
+  display: block;
+}
+
+.stageRail strong {
+  color: var(--ds-text-primary);
+  font-size: 0.8125rem;
+}
+
+.stageRail small {
+  margin-top: 3px;
+  font-size: 0.75rem;
+}
+
+.monitorActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.visuallyHidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 1439px) {
+  .filterGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1199px) {
+  .filterGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .desktopTable :global(th:nth-child(6)),
+  .desktopTable :global(td:nth-child(6)) { display: none; }
+  .uploadGrid { grid-template-columns: 1fr; }
+  .dropZone { min-height: 230px; }
+}
+
+@media (max-width: 899px) {
+  .stageRail { grid-template-columns: 1fr; gap: 14px; }
+  .stageRail li:not(:last-child)::after {
+    top: 31px;
+    bottom: -13px;
+    left: 13px;
+    width: 1px;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageStack { gap: 18px; }
+  .filterPanel,
+  .uploadPanel,
+  .monitorPanel { padding: 16px; }
+  .filterGrid { grid-template-columns: 1fr; }
+  .filterActions { flex-direction: column; align-items: stretch; }
+  .filterActions :global(.ds-button:first-child) { order: -1; }
+  .desktopTable { display: none; }
+  .mobileCards { display: grid; gap: 12px; }
+  .dropZone { min-height: 176px; padding: 18px; }
+  .monitorHeading,
+  .statusPairs { flex-direction: column; }
+  .monitorActions { display: grid; }
+  .actionGroup { display: grid; }
+  .documentId span { display: block; overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stageRail li[data-status="in_progress"] svg { animation: none; }
+}
+
+@media (forced-colors: active) {
+  .dropZone,
+  .stageIcon { forced-color-adjust: auto; }
+}

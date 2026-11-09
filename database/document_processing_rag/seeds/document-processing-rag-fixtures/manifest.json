@@ -1,0 +1,24 @@
+{
+  "scope": "DATABASE_ONLY",
+  "version": 2,
+  "description": "Synthetic fixed-identity persistence fixtures; no customer or model-generated data.",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "database-fixture-only-not-a-production-model-revision",
+  "vector_dimension": 384,
+  "documents": [
+    "66666666-6666-4666-8666-000000000001",
+    "66666666-6666-4666-8666-000000000003",
+    "66666666-6666-4666-8666-000000000004",
+    "66666666-6666-4666-8666-000000000005",
+    "66666666-6666-4666-8666-000000000006"
+  ],
+  "counts": {
+    "document_partitions": 5,
+    "document_chunks": 7,
+    "extraction_runs": 5,
+    "invoices": 4,
+    "line_items": 5,
+    "field_evidence": 2,
+    "validation_results": 2
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "DATABASE_ONLY",
+  "version": 1,
+  "feature": "human-review-audit",
+  "synthetic_only": true,
+  "required_parent_counts": {
+    "companies": 2,
+    "users": 3,
+    "documents": 4,
+    "completed_jobs": 4,
+    "completed_extraction_runs": 4,
+    "invoices": 4
+  },
+  "counts": {
+    "review_audit_events": 10,
+    "review_audit_changes": 6,
+    "review_validation_runs": 8,
+    "review_validation_results": 18,
+    "review_idempotency_keys": 10,
+    "reviewer_added_line_items": 1
+  },
+  "coverage": [
+    "two_tenants",
+    "field_edited",
+    "approved",
+    "rejected",
+    "reopened",
+    "reviewer_added_line",
+    "passed",
+    "failed",
+    "missing",
+    "not_applicable",
+    "idempotent_replay",
+    "export_boundary_parent"
+  ]
+}
+
+

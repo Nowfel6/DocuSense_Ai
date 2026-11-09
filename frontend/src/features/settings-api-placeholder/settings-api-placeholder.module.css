@@ -1,0 +1,80 @@
+.page {
+  display: grid;
+  width: min(100%, 760px);
+  gap: 24px;
+}
+
+.page :global(.ds-page-header) {
+  margin-bottom: 0;
+}
+
+.panel {
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface);
+  box-shadow: var(--ds-shadow-raised);
+}
+
+.statusRow,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy {
+  display: grid;
+  max-width: 68ch;
+  gap: 10px;
+}
+
+.copy h2,
+.copy p {
+  margin: 0;
+}
+
+.copy h2 {
+  color: var(--ds-text-primary);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.copy p,
+.plannedAreas {
+  color: var(--ds-text-secondary);
+}
+
+.plannedAreas {
+  display: grid;
+  max-width: 68ch;
+  gap: 8px;
+  padding-left: 22px;
+  margin: 0;
+}
+
+.plannedAreas strong {
+  color: var(--ds-text-primary);
+}
+
+.actions {
+  padding-top: 4px;
+}
+
+.actions :global(.ds-button) {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .panel {
+    padding: 20px;
+  }
+
+  .actions :global(.ds-button) {
+    width: 100%;
+  }
+}
+

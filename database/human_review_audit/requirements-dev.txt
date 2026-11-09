@@ -1,0 +1,3 @@
+# Reuse the canonical database verification toolchain already pinned by the
+# document-processing/RAG predecessor. Human review adds no new test dependency.
+-r ../document_processing_rag/requirements-dev.txt

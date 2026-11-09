@@ -1,0 +1,35 @@
+{
+  "feature": "document-search-export",
+  "contract_version": "1.0",
+  "scope": "DATABASE_ONLY",
+  "synthetic_only": true,
+  "redacted": true,
+  "counts": {
+    "export_jobs": 7,
+    "export_job_documents": 7,
+    "required_parent_documents": 2,
+    "required_tenants": 2
+  },
+  "states": [
+    "synchronous_completed_csv",
+    "asynchronous_queued_json",
+    "asynchronous_processing_xlsx",
+    "failed_source_changed",
+    "completed_then_expired_zip",
+    "scheduled_retry",
+    "distinct_idempotency_key"
+  ],
+  "source_hash_policy": "DATABASE_CANONICAL_FUNCTION_AT_SEED",
+  "source_hash_reason": "Feature fixtures may not duplicate or mutate predecessor invoice values; the guarded loader verifies the fixed parent identity/revision and obtains the canonical database hash in the same transaction.",
+  "required_predecessor_approval": "Human-review fixture parents must exist in approved states before this loader runs.",
+  "resolved_predecessor_expansion": "four reviewable aggregates now include three approved parents across two tenants",
+  "scale_gate": {
+    "tenant_count": 2,
+    "documents_per_tenant": 501,
+    "page_boundary": "500+1",
+    "vector_dimensions": 384,
+    "persistence": "transaction_rollback"
+  },
+  "blocked_expansions": [],
+  "tracked_issue": "DB-ISSUE-009"
+}

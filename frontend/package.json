@@ -1,0 +1,52 @@
+{
+  "name": "docusense-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "packageManager": "npm@10.9.2",
+  "scripts": {
+    "dev": "next dev",
+    "dev:e2e": "next dev -H 127.0.0.1 -p 3100",
+    "dev:e2e:foundation": "next dev e2e/fixture-app -H 127.0.0.1 -p 3100",
+    "dev:fixture-backend": "node e2e/fixture-backend.mjs",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "npm run test:e2e:foundation && npm run test:e2e:auth",
+    "test:e2e:auth": "playwright test --config playwright.config.ts",
+    "test:e2e:foundation": "playwright test --config playwright.foundation.config.ts",
+    "check:toolchain": "next --version && tsc --version",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "1.45.0",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "22.20.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "@vitest/coverage-v8": "5.0.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.4",
+    "jsdom": "29.1.1",
+    "typescript": "5.9.3",
+    "tailwindcss": "4.3.3",
+    "vitest": "5.0.0"
+  }
+}

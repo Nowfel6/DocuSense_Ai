@@ -1,0 +1,20 @@
+# Database build/test environment resolved on 2026-09-03, Windows / Python 3.13.
+# No API, object-storage, broker or worker dependencies. Includes transitive pins.
+alembic==1.19.1
+colorama==0.4.6
+greenlet==3.5.5
+iniconfig==2.3.0
+Mako==1.4.1
+MarkupSafe==3.0.3
+packaging==26.3
+pglast==7.18
+pillow==11.3.0
+pluggy==1.6.0
+psycopg==3.3.5
+psycopg-binary==3.3.5
+Pygments==2.21.0
+pypdf==6.16.2
+pytest==8.4.2
+SQLAlchemy==2.0.52
+typing_extensions==4.16.0
+tzdata==2026.3

@@ -1,0 +1,352 @@
+.pageStack {
+  display: grid;
+  min-width: 0;
+  gap: 18px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  overflow-x: auto;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+  background: var(--ds-surface);
+}
+
+.tab {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: calc(var(--ds-radius-control) - 3px);
+  color: var(--ds-text-secondary);
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab[data-selected="true"] {
+  color: var(--ds-text-primary);
+  background: var(--ds-surface-raised);
+  box-shadow: inset 0 -2px var(--ds-technical);
+}
+
+.tab:focus-visible,
+.separator:focus-visible {
+  outline: 2px solid var(--ds-focus);
+  outline-offset: 2px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(360px, var(--review-source-percent)) 12px minmax(600px, 1fr);
+  min-width: 0;
+  align-items: start;
+}
+
+.sourceRegion,
+.reviewRegion {
+  min-width: 0;
+}
+
+.sourcePane,
+.section {
+  display: grid;
+  min-width: 0;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-surface);
+}
+
+.sectionHeading,
+.evidenceHeading,
+.auditHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.section h2,
+.section h3,
+.section p,
+.sourcePane h2,
+.sourcePane p,
+.sectionHeading h2,
+.sectionHeading p,
+.auditHeading strong,
+.auditHeading span {
+  margin: 0;
+}
+
+.section h2,
+.sourcePane h2 {
+  font-size: 1.125rem;
+}
+
+.sectionHeading p,
+.emptyText,
+.staleText,
+.evidenceCard p,
+.auditHeading span,
+.auditList p,
+.auditList small {
+  color: var(--ds-text-secondary);
+  font-size: 0.875rem;
+}
+
+.separator {
+  align-self: stretch;
+  min-height: 36rem;
+  cursor: col-resize;
+  touch-action: none;
+  position: relative;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  inset: 0 5px;
+  border-radius: 999px;
+  background: var(--ds-border-strong);
+}
+
+.separator:hover::before,
+.separator:focus-visible::before {
+  background: var(--ds-technical);
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lineList,
+.ruleList,
+.auditList,
+.evidenceList {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lineCard,
+.evidenceCard,
+.auditList > li,
+.ruleList > li,
+.blockers {
+  padding: 16px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+  background: var(--ds-surface-raised);
+}
+
+.lineCard fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.lineCard legend {
+  float: left;
+  font-weight: 700;
+}
+
+.lineActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.lineGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  clear: both;
+  gap: 14px;
+}
+
+.descriptionField {
+  display: grid;
+  grid-column: span 2;
+  gap: 7px;
+}
+
+.descriptionField textarea,
+.section textarea {
+  min-height: auto;
+  resize: vertical;
+}
+
+.evidenceCard,
+.auditList > li {
+  display: grid;
+  gap: 10px;
+}
+
+.evidenceCard dl,
+.validationSummary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.evidenceCard dl div,
+.validationSummary div {
+  display: grid;
+  gap: 3px;
+}
+
+.evidenceCard dt,
+.validationSummary dt {
+  color: var(--ds-text-muted);
+  font-size: 0.75rem;
+}
+
+.evidenceCard dd,
+.validationSummary dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.ruleList > li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ruleList > li div,
+.auditHeading > div {
+  display: grid;
+  gap: 3px;
+}
+
+.ruleList span {
+  color: var(--ds-text-muted);
+  font-family: var(--ds-font-mono);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.blockers {
+  border-color: var(--ds-danger);
+}
+
+.blockers ul,
+.auditList ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.auditList code {
+  color: var(--ds-technical);
+  overflow-wrap: anywhere;
+}
+
+.auditList details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination,
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actionBar {
+  position: sticky;
+  z-index: 5;
+  bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--ds-border-strong);
+  border-radius: var(--ds-radius-panel);
+  background: color-mix(in srgb, var(--ds-surface) 94%, transparent);
+  box-shadow: var(--ds-shadow-raised);
+  backdrop-filter: blur(12px);
+}
+
+@media (min-width: 1200px) {
+  .tabs .tab:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .workspace {
+    display: block;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .sourceRegion:not([data-mobile-active="true"]),
+  .reviewRegion:not([data-mobile-active="true"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .sourcePane,
+  .section {
+    padding: 16px;
+  }
+
+  .fieldGrid,
+  .lineGrid,
+  .evidenceCard dl,
+  .validationSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .descriptionField {
+    grid-column: auto;
+  }
+
+  .sectionHeading,
+  .auditHeading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actionBar {
+    position: static;
+    justify-content: stretch;
+  }
+
+  .actionBar > * {
+    flex: 1 1 100%;
+  }
+}
+
+@media (forced-colors: active) {
+  .tab[data-selected="true"],
+  .separator::before {
+    outline: 2px solid CanvasText;
+  }
+}
